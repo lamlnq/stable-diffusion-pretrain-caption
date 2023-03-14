@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Data Constructor</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/semantic/semantic.min.css">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/scroll-to.js"></script>
+    <script src="assets/semantic/semantic.min.js"></script>
+</head>
+<body>
+    <div class="window">
+        <div class="data-slider" id="dataSlider">
+            <ul class="data-list" id="dataList"></ul>
+        </div>
+        <div class="main-workplace">
+            <div class="preview" id="preview">
+                <div class="data-current" id="mainViewer"></div>
+                <div class="nav-btn">
+                    <div class="nav-navigation">
+                        <button class="ui button icon" id="navLeft"><i class="angle left icon"></i></button>
+                        <button class="ui button icon" id="navRight"><i class="angle right icon"></i></button>
+                    </div>
+                    <div class="ui icon input">
+                        <input type="text" placeholder="Press Enter to add" id="keywordCompose">
+                    </div>
+                    <div class="nav-action">
+                        <button class="ui button icon" id="actRefresh"><i class="icon refresh"></i></button>
+                        <button class="ui button icon" id="actSave"><i class="icon save"></i></button>
+                    </div>
+                </div>
+                <div class="ui divider"></div>
+                <div class="data-current-tags ui labels" id="currentTagList"></div>
+            </div>
+            <div class="nav">
+                <div class="data-browser">
+                    <div class="data-browser-inner">
+                        <div class="ui fluid action input">
+                            <input type="text" placeholder="Browse Data Folder" readonly id="sourceFolder">
+                            <button id="btnOpenSource" class="ui button icon">
+                                <i class="folder icon"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tag-compose">
+                        <button id="btnLoadKeyword" class="ui button">
+                            <i class="tags icon"></i>
+                            Load Keyword
+                        </button>
+                        <button id="btnSaveKeyword" class="ui button">
+                            <i class="save icon"></i>
+                            Export Keyword
+                        </button>
+                    </div>
+                </div>
+                <div class="tag-control">
+                    <div class="ui grid">
+                        <div class="twelve wide stretched column">
+                            <div class="tag-directory" id="useTags"></div>
+                        </div>
+                        <div class="four wide column">
+                            <div class="ui vertical fluid right tabular menu" id="useTagFolders">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="./assets/js/main.js"></script>
+</body>
+</html>

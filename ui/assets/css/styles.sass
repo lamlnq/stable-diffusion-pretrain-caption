@@ -1,0 +1,94 @@
+body
+  padding: 0
+  margin: 0
+*
+  box-sizing: border-box
+.window
+  padding: 0.5rem
+.main-workplace
+  display: flex
+  flex-direction: row
+.preview
+  min-width: 512px
+  width: 512px
+  max-width: 768px
+  img
+    width: 100%
+.nav
+  margin-left: 1rem
+  margin-bottom: 0.5rem
+  flex: 1
+.data-slider
+  height: 120px
+  width: 100%
+  position: relative
+  overflow-x: scroll
+  overflow-y: hidden
+  display: flex
+  align-items: center
+  justify-content: flex-start
+.data-list
+  list-style: none
+  padding: 0
+  margin: 0.5rem 0
+  display: flex
+  align-items: flex-start
+  justify-content: flex-start
+  flex-direction: row
+  height: 100%
+  ul
+    list-style: none
+    padding: 0.5rem 0
+    margin: 0
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: flex-start
+  .data-thumb
+    min-width: 50px
+    width: 100px
+    max-width: 100px
+    display: inline-block
+    padding: 0.25rem
+    white-space: nowrap
+    flex: 0 0 100px
+    &.active
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px
+    img
+      width: 100%
+.tag-control
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  margin-top: 0.5rem
+.nav-paging
+  margin-bottom: 0.5rem
+.nav-btn
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  margin: 0.5rem 0
+.tag-compose
+  flex: 1
+.data-current-tags
+  height: 70px
+.data-current
+  margin-top: 0.5rem
+.tag-directory
+  margin-top: 0.5rem
+  .tag-folder
+    margin-top: 0.5rem
+
+.label
+  cursor: pointer
+.data-browser
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: flex-start
+  margin-top: 0.5rem
+  .data-browser-inner
+    width: 50%
+    min-width: 280px
+    margin-right: 1rem
