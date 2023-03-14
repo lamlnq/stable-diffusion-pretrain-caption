@@ -19,6 +19,7 @@
   },
   "scripts": {
     "tsc": "tsc",
-    "run": "npm run tsc && electron ."
+    "run": "npm run tsc && electron .",
+    "build": "tsc && electron-builder build"
   }
 }
