@@ -46,7 +46,7 @@ window.api.receive('caption.get', tags => {
         currentTagList.html('');
         let index = 0;
         for (const tag of tags) {
-            currentTagList.append('<div class="ui label" id="c-tag-' + index + '">' + tag + '<i class="delete icon" onclick="removeTag(\'' + tag + '\')"></i></div>');
+            currentTagList.append('<div class="ui label" id="c-tag-' + index + '">' + tag + '<i class="delete icon" onclick="removeTag(\'' + tag + '\', this)"></i></div>');
             index++;
         }
     }
@@ -116,12 +116,12 @@ function selectPhoto(index) {
     const item = $('#data-' + currentIndex);
     item.addClass('active');
     // @ts-ignore
-    dataSlider.scrollTo(item);
+    dataSlider.scrollTo(item, 500, { offset: { left: 0.5, top: 0 } });
 }
-function removeTag(tagToRemove) {
+function removeTag(tagToRemove, eRef) {
     for (const tag of currentData.tags) {
         if (tag == tagToRemove) {
-            $('#c-tag-' + currentData.tags.indexOf(tag)).remove();
+            $(eRef).parent().remove();
             currentData.tags.splice(currentData.tags.indexOf(tag), 1);
             return;
         }
@@ -134,7 +134,7 @@ function addTag(folder, index) {
     }
     else {
         currentData.tags.push(tag);
-        currentTagList.append('<div class="ui label" id="c-tag-' + currentData.tags.indexOf(tag) + '">' + tag + '<i class="delete icon" onclick="removeTag(\'' + tag + '\')"></i></div>');
+        currentTagList.append('<div class="ui label" id="c-tag-' + currentData.tags.indexOf(tag) + '">' + tag + '<i class="delete icon" onclick="removeTag(\'' + tag + '\', this)"></i></div>');
     }
 }
 function showTagFolder(folderIndex) {

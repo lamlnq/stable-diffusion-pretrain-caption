@@ -118,7 +118,7 @@ function selectPhoto(index?: number) {
     const item = $('#data-' + currentIndex);
     item.addClass('active');
     // @ts-ignore
-    dataSlider.scrollTo(item);
+    dataSlider.scrollTo(item, 500, {offset: {left:0.5, top:0}});
 }
 function removeTag(tagToRemove: string, eRef: HTMLElement) {
     for (const tag of currentData.tags) {
@@ -135,7 +135,7 @@ function addTag(folder:string,index: number) {
         return true;
     } else {
         currentData.tags.push(tag);
-        currentTagList.append('<div class="ui label" id="c-tag-'+currentData.tags.indexOf(tag)+'">'+tag+'<i class="delete icon" onclick="removeTag(\''+ tag +'\')"></i></div>')
+        currentTagList.append('<div class="ui label" id="c-tag-'+currentData.tags.indexOf(tag)+'">'+tag+'<i class="delete icon" onclick="removeTag(\''+ tag +'\', this)"></i></div>')
     }
 }
 function showTagFolder(folderIndex: number) {
